@@ -1,0 +1,32 @@
+.navigation {
+  background: $color-primary;
+  padding: 1.4rem 1rem;
+  @include df;
+  h1 {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid $color-alt;
+    position: relative;
+    text-indent: -99999px;
+    &:after {
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 40px solid $color-alt;
+      position: absolute;
+      content: "";
+      top: 15px;
+      left: -20px;
+    }
+  }
+}
+
+.options {
+  background: $color-bg;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+}

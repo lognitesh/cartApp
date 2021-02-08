@@ -1,0 +1,9 @@
+@mixin br($val) {
+  border-radius: $val;
+}
+
+@mixin df() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,13 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "header";
+
+body {
+  font: normal 16px $font-primary;
+}
+
+.wrapper {
+  width: $mx-width;
+  margin: 0 auto;
+}
