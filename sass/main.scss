@@ -1,10 +1,18 @@
 @import "reset";
 @import "variables";
 @import "mixins";
+@import "btn";
 @import "header";
+@import "grid";
+@import "footer";
+@import "overlay";
 
 body {
   font: normal 16px $font-primary;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
 }
 
 .wrapper {

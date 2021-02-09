@@ -3,39 +3,139 @@
   padding: 0;
   box-sizing: border-box; }
 
-.navigation {
+ul,
+ol,
+li {
+  list-style: none; }
+
+input,
+button {
+  border: 0 none;
+  outline: none; }
+
+.btn {
+  border-radius: 5px;
+  border: 0 none;
+  padding: 0.5rem 1.5rem;
+  background: #f7ad22;
+  font-weight: 800;
+  margin: 1.5rem 0;
+  cursor: pointer; }
+
+.header {
   background: #4269ea;
-  padding: 1.4rem 1rem;
+  color: #fff;
+  padding: 1.4rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .navigation h1 {
+  .header h1 {
     width: 0;
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-bottom: 40px solid #f7cd22;
+    border-bottom: 40px solid #f7ad22;
     position: relative;
     text-indent: -99999px; }
-    .navigation h1:after {
+    .header h1:after {
       width: 0;
       height: 0;
       border-left: 20px solid transparent;
       border-right: 20px solid transparent;
-      border-top: 40px solid #f7cd22;
+      border-top: 40px solid #f7ad22;
       position: absolute;
       content: "";
       top: 15px;
       left: -20px; }
+  .header .search input {
+    font-size: 1.25rem;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    padding: 0.5rem 0 0.5rem; }
+  .header .cart {
+    color: #fff;
+    position: relative;
+    background: transparent;
+    outline: none; }
+    .header .cart .fa {
+      font-size: 1.5rem; }
+    .header .cart #cartItemCount {
+      position: absolute;
+      background: #ff0000;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      right: -20px;
+      top: -15px; }
 
 .options {
   background: #f1f3f6;
-  padding: 0.8rem 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   margin: 0 0 1.5rem 0; }
+  .options button {
+    background: transparent;
+    cursor: pointer;
+    border: 0 none;
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 0 2.5rem; }
+
+.grid ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75em; }
+  .grid ul li {
+    border: 1px solid #1c1c1c;
+    text-align: center;
+    padding: 1.5rem 2.5rem; }
+    .grid ul li h2 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0; }
+    .grid ul li img {
+      width: 100%;
+      height: 150px;
+      max-width: 150px; }
+    .grid ul li .info {
+      font-weight: 800; }
+      .grid ul li .info .price {
+        color: #1c1c1c; }
+      .grid ul li .info .discount {
+        color: #8f8f90;
+        text-decoration: line-through;
+        margin: 0 0.3rem; }
+      .grid ul li .info .off {
+        color: #14a214; }
+
+.footer {
+  background: #4269ea;
+  padding: 1.4rem 1rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 2.5rem; }
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }
+  .overlay .content {
+    background: #fff;
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto; }
 
 body {
-  font: normal 16px Helvetica, sans-serif; }
+  font: normal 16px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+::-webkit-input-placeholder {
+  color: #fff; }
 
 .wrapper {
   width: 1280px;

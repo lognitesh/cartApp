@@ -1,6 +1,7 @@
-.navigation {
+.header {
   background: $color-primary;
-  padding: 1.4rem 1rem;
+  color: $color-white;
+  padding: 1.4rem 2rem;
   @include df;
   h1 {
     width: 0;
@@ -22,11 +23,49 @@
       left: -20px;
     }
   }
+  .search {
+    input {
+      font-size: $fs-l;
+      background: transparent;
+      border-bottom: 2px solid $color-white;
+      color: $color-white;
+      padding: 0.5rem 0 0.5rem;
+    }
+  }
+  .cart {
+    color: $color-white;
+    position: relative;
+    background: transparent;
+    outline: none;
+    .fa {
+      font-size: $fs-xl;
+    }
+    #cartItemCount {
+      position: absolute;
+      background: #ff0000;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      right: -20px;
+      top: -15px;
+    }
+  }
 }
 
 .options {
   background: $color-bg;
-  padding: 0.8rem 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   margin: 0 0 1.5rem 0;
+  button {
+    background: transparent;
+    cursor: pointer;
+    border: 0 none;
+    font-weight: 800;
+    font-size: $fs-xl;
+    margin: 0 2.5rem;
+  }
 }
