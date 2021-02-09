@@ -151,7 +151,7 @@ button {
     display: none;
     background: #fff;
     padding: 1.5rem;
-    max-width: 800px;
+    max-width: 350px;
     margin: 5% auto 0;
     position: relative;
     text-align: center; }
@@ -166,6 +166,8 @@ button {
     font-weight: 500;
     font-size: 1.5rem;
     margin-bottom: 2rem; }
+  .overlay .radioInputs {
+    text-align: left; }
   .overlay .close {
     color: #fff;
     position: absolute;

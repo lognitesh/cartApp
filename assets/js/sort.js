@@ -60,10 +60,10 @@ applySortBtn.addEventListener("click", () => {
         itemsArr.sortByDiscount();
         break;
       case "highLow":
-        itemsArr.sortPriceByHigh();
+        itemsArr.sortPriceByLow();
         break;
       case "lowHigh":
-        itemsArr.sortPriceByLow();
+        itemsArr.sortPriceByHigh();
         break;
     }
 
