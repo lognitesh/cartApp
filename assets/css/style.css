@@ -52,7 +52,14 @@ button {
     background: transparent;
     border-bottom: 2px solid #fff;
     color: #fff;
-    padding: 0.5rem 0 0.5rem; }
+    padding: 0.5rem 0 0.5rem;
+    position: relative; }
+    .header .search input::before {
+      content: "\25AE";
+      font-family: FontAwesome;
+      left: -5px;
+      position: absolute;
+      top: 0; }
   .header .cart {
     color: #fff;
     position: relative;
@@ -60,7 +67,7 @@ button {
     outline: none; }
     .header .cart .fa {
       font-size: 1.5rem; }
-    .header .cart #cartItemCount {
+    .header .cart .cartItemCount {
       position: absolute;
       background: #ff0000;
       width: 25px;
@@ -85,31 +92,41 @@ button {
     font-size: 1.5rem;
     margin: 0 2.5rem; }
 
-.grid ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.75em; }
-  .grid ul li {
-    border: 1px solid #1c1c1c;
-    text-align: center;
-    padding: 1.5rem 2.5rem; }
-    .grid ul li h2 {
-      font-size: 1.5rem;
-      margin: 1.5rem 0; }
-    .grid ul li img {
-      width: 100%;
-      height: 150px;
-      max-width: 150px; }
-    .grid ul li .info {
-      font-weight: 800; }
-      .grid ul li .info .price {
-        color: #1c1c1c; }
-      .grid ul li .info .discount {
-        color: #8f8f90;
-        text-decoration: line-through;
-        margin: 0 0.3rem; }
-      .grid ul li .info .off {
-        color: #14a214; }
+.grid {
+  padding: 1.5rem; }
+  .grid ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.75em; }
+    .grid ul li {
+      border: 1px solid #1c1c1c;
+      text-align: center;
+      padding: 1.5rem 2.5rem; }
+      .grid ul li h2 {
+        font-size: 1.5rem;
+        margin: 1.5rem 0; }
+      .grid ul li img {
+        width: 100%;
+        height: 150px;
+        max-width: 150px; }
+      .grid ul li .info {
+        font-weight: 800; }
+        .grid ul li .info .price {
+          color: #1c1c1c; }
+        .grid ul li .info .discount {
+          color: #8f8f90;
+          text-decoration: line-through;
+          margin: 0 0.3rem; }
+        .grid ul li .info .off {
+          color: #14a214; }
+
+@media screen and (max-width: 990px) {
+  .grid ul {
+    grid-template-columns: 1fr 1fr; } }
+
+@media screen and (max-width: 500px) {
+  .grid ul {
+    grid-template-columns: 1fr; } }
 
 .footer {
   background: #4269ea;
@@ -130,7 +147,17 @@ button {
     background: #fff;
     padding: 1.5rem;
     max-width: 800px;
-    margin: 5% auto 0; }
+    margin: 5% auto 0;
+    position: relative; }
+  .overlay .sort,
+  .overlay .filter,
+  .overlay .carItems {
+    display: none; }
+  .overlay .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.25rem; }
 
 body {
   font: normal 16px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
@@ -139,5 +166,6 @@ body {
   color: #fff; }
 
 .wrapper {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto; }

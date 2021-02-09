@@ -1,4 +1,5 @@
 .grid {
+  padding: 1.5rem;
   ul {
     @include dg;
     li {
@@ -28,6 +29,22 @@
           color: #14a214;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: $dw-medium) {
+  .grid {
+    ul {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: $dw-small) {
+  .grid {
+    ul {
+      grid-template-columns: 1fr;
     }
   }
 }

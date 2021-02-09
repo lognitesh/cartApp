@@ -12,10 +12,11 @@ body {
 }
 
 ::-webkit-input-placeholder {
-  color: #fff;
+  color: $color-white;
 }
 
 .wrapper {
-  width: $mx-width;
+  width: 100%;
+  max-width: $mx-width;
   margin: 0 auto;
 }

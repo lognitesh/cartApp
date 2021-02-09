@@ -30,6 +30,14 @@
       border-bottom: 2px solid $color-white;
       color: $color-white;
       padding: 0.5rem 0 0.5rem;
+      position: relative;
+      &::before {
+        content: "\25AE";
+        font-family: FontAwesome;
+        left: -5px;
+        position: absolute;
+        top: 0;
+      }
     }
   }
   .cart {
@@ -40,7 +48,7 @@
     .fa {
       font-size: $fs-xl;
     }
-    #cartItemCount {
+    .cartItemCount {
       position: absolute;
       background: #ff0000;
       width: 25px;

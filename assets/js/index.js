@@ -1,21 +1,25 @@
-import fetchProducts from './api/api.js';
-import renderItem from './item.js';
-import cart from './cart.js';
+import fetchProducts from "./api/api.js";
+import searchItems from "./searchItems.js";
+import renderItems from "./renderItems.js";
+import cart from "./cart.js";
+import "./sort.js";
+import "./filter.js";
 
 let products;
 
-const gridUL = document.querySelector(".grid ul");
+const searchInput = document.querySelector(".search input");
 
-const renderItems = async () =>{
-    const {items} = await fetchProducts();
-    products = items;
-    let itemsLI = ""; 
-    items.forEach((item) => {
-        itemsLI += renderItem(item); 
-    });
-    gridUL.innerHTML = itemsLI;
-    cart(items);
+const getProducts = async () => {
+  const { items } = await fetchProducts();
+  products = items;
+  renderItems(items);
+  cart(items);
 };
 
-renderItems();
+getProducts();
 
+searchInput.addEventListener("keyup", searchItems);
+
+const getFetchedProducts = () => products;
+
+export { getFetchedProducts };

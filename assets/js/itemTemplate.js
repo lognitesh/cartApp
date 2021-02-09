@@ -1,4 +1,4 @@
-const renderItem = (data) =>{
+const itemTemplate = (data) =>{
     return `<li id="${data.id}">
     <img src="${data.image}" alt="${data.name}" title="${data.name}" />
     <h2>${data.name}</h2>
@@ -11,4 +11,4 @@ const renderItem = (data) =>{
 </li>`;
 };
 
-export default renderItem;
+export default itemTemplate;

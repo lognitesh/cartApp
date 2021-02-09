@@ -13,7 +13,7 @@
         <header class="header">
             <h1>Logo Name</h1>
             <div class="search"><input type="text" placeholder="Search" /></div>
-            <button class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span id="cartItemCount"></span></button>
+            <button class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="cartItemCount"></span></button>
         </header>
         <div class="options">
             <button class="sort"><i class="fa fa-sort" aria-hidden="true"></i> Sort</button>
@@ -25,9 +25,60 @@
         </footer>
     </div>
     <div class="overlay">
-        <div class="content sort"></div>
-        <div class="content filter"></div>
-        <div class="content cartitems"></div>
+        <div class="content sort">
+            <h3>Sort Options</h3>
+            <div class="radiInputs">
+                <input type="radio" value="highLow" name="sorting" id="highLow" /> <label for="highLow">Price -- High Low</label><br /> 
+                <input type="radio" value="lowHigh" name="sorting" id="lowHigh" /> <label for="lowHigh">Price -- Low High</label> <br />
+                <input type="radio" value="discount" name="sorting" id="discount" /> <label for="discount">Discount</label> 
+            </div>
+            <div class="btnModule">
+                <button class="btn" id="cancel">Cancel</button>
+                <button class="btn" id="apply">Apply</button>
+            </div>
+        </div>
+        <div class="content filter">
+            <h3>Filter Options</h3>
+            <div class="radioInputs">
+                <input type="range" max="10000" min="100" step="100" name="filter" id="range" />
+                <span id="rangeInputValue">$0</span>
+            </div>
+            <div class="btnModule">
+                <button class="btn" id="cancel2">Cancel</button>
+                <button class="btn" id="apply2">Apply</button>
+            </div>
+        </div>
+        <div class="content cartitems">
+            <i class="fa fa-times close" aria-hidden="true"></i>
+            <table id="productListing">
+                <tr>
+                    <th>Items<span class="cartItemCount"></span></th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                </tr>
+            </table>
+            <div class="cartSummary">
+                <h3>Total</h3>
+                <table id="productSummary">
+                    <tr>
+                        <td>Items<span class="cartItemCount"></span></th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Discount</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Type Discount</th>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Order Total</th>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
     <script type='module' src='./assets/js/index.js'></script>
 </body>

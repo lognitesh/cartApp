@@ -11,5 +11,17 @@
     padding: 1.5rem;
     max-width: 800px;
     margin: 5% auto 0;
+    position: relative;
+  }
+  .sort,
+  .filter,
+  .carItems {
+    display: none;
+  }
+  .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: $fs-l;
   }
 }
