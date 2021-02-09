@@ -1,20 +1,19 @@
 import { getFetchedProducts } from "./index.js";
 import renderItems from "./renderItems.js";
 
-const sortBtn = document.querySelector(".options .sort");
+const sortBtn = document.querySelector(".options .sortBtn");
 const cartOverlay = document.querySelector(".overlay");
-const closeIcon = document.querySelector(".overlay .close");
-const cancelBtn = document.getElementById("cancel");
-const applyBtn = document.getElementById("apply");
+const cancelSortBtn = document.getElementById("cancelSort");
+const applySortBtn = document.getElementById("applySort");
 
 sortBtn.addEventListener("click", () => {
   cartOverlay.style.display = "block";
-  cartOverlay.querySelector(".sort").style.display = "block";
+  cartOverlay.querySelector(".sortContent").style.display = "block";
 });
 
-closeIcon.addEventListener("click", () => {
+cancelSortBtn.addEventListener("click", () => {
   cartOverlay.style.display = "none";
-  cartOverlay.querySelector(".sort").style.display = "none";
+  cartOverlay.querySelector(".sortContent").style.display = "none";
 });
 
 Array.prototype.sortByDiscount = function () {
@@ -50,7 +49,7 @@ Array.prototype.sortPriceByLow = function () {
   });
 };
 
-applyBtn.addEventListener("click", () => {
+applySortBtn.addEventListener("click", () => {
   const selectedRadio = document.querySelector("input[name='sorting']:checked");
   if (selectedRadio) {
     const radioVal = selectedRadio.value;
@@ -69,5 +68,7 @@ applyBtn.addEventListener("click", () => {
     }
 
     renderItems(itemsArr);
+    cartOverlay.style.display = "none";
+    cartOverlay.querySelector(".sortContent").style.display = "none";
   }
 });

@@ -11,13 +11,13 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <h1>Logo Name</h1>
-            <div class="search"><input type="text" placeholder="Search" /></div>
-            <button class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="cartItemCount"></span></button>
+            <h1>CartApp</h1>
+            <div class="search"><input type="text" placeholder="Search" /><i class="fa fa-search" aria-hidden="true"></i></div>
+            <button class="cartBtn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="cartItemCount"></span></button>
         </header>
         <div class="options">
-            <button class="sort"><i class="fa fa-sort" aria-hidden="true"></i> Sort</button>
-            <button class="filter"><i class="fa fa-filter" aria-hidden="true"></i> Filter</button>
+            <button class="sortBtn"><i class="fa fa-sort" aria-hidden="true"></i> Sort</button>
+            <button class="filterBtn"><i class="fa fa-filter" aria-hidden="true"></i> Filter</button>
         </div>
         <div class="grid"><ul></ul></div>
         <footer class="footer">
@@ -25,36 +25,46 @@
         </footer>
     </div>
     <div class="overlay">
-        <div class="content sort">
+        <div class="sortContent">
             <h3>Sort Options</h3>
-            <div class="radiInputs">
-                <input type="radio" value="highLow" name="sorting" id="highLow" /> <label for="highLow">Price -- High Low</label><br /> 
-                <input type="radio" value="lowHigh" name="sorting" id="lowHigh" /> <label for="lowHigh">Price -- Low High</label> <br />
-                <input type="radio" value="discount" name="sorting" id="discount" /> <label for="discount">Discount</label> 
+            <div class="radioInputs">
+                <p><input type="radio" value="highLow" name="sorting" id="highLow" /> <label for="highLow">Price -- High Low</label></p>
+                <p><input type="radio" value="lowHigh" name="sorting" id="lowHigh" /> <label for="lowHigh">Price -- Low High</label></p>
+                <p><input type="radio" value="discount" name="sorting" id="discount" /> <label for="discount">Discount</label> </p>
             </div>
             <div class="btnModule">
-                <button class="btn" id="cancel">Cancel</button>
-                <button class="btn" id="apply">Apply</button>
+                <button class="btn" id="cancelSort">Cancel</button>
+                <button class="btn" id="applySort">Apply</button>
             </div>
         </div>
-        <div class="content filter">
+        <div class="filterContent">
             <h3>Filter Options</h3>
             <div class="radioInputs">
                 <input type="range" max="10000" min="100" step="100" name="filter" id="range" />
                 <span id="rangeInputValue">$0</span>
             </div>
             <div class="btnModule">
-                <button class="btn" id="cancel2">Cancel</button>
-                <button class="btn" id="apply2">Apply</button>
+                <button class="btn" id="cancelFilter">Cancel</button>
+                <button class="btn" id="applyFilter">Apply</button>
             </div>
         </div>
-        <div class="content cartitems">
+        <div class="cartItemContent">
             <i class="fa fa-times close" aria-hidden="true"></i>
             <table id="productListing">
                 <tr>
                     <th>Items<span class="cartItemCount"></span></th>
                     <th>Qty</th>
                     <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Samsung Series 4</td>
+                    <td>1</td>
+                    <td>$13999</td>
+                </tr>
+                <tr>
+                    <td>Samsung Series 4</td>
+                    <td>1</td>
+                    <td>$13999</td>
                 </tr>
             </table>
             <div class="cartSummary">

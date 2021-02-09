@@ -6,6 +6,12 @@
       border: 1px solid $color-secondary;
       text-align: center;
       padding: 1.5rem 2.5rem;
+      &.error {
+        text-align: center;
+        border: 2px solid #ff0000;
+        color: $color-primary;
+        font-weight: 500;
+      }
       h2 {
         font-size: $fs-xl;
         margin: 1.5rem 0;

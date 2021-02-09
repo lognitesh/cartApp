@@ -37,7 +37,7 @@ button {
     border-bottom: 40px solid #f7ad22;
     position: relative;
     text-indent: -99999px; }
-    .header h1:after {
+    .header h1::after {
       width: 0;
       height: 0;
       border-left: 20px solid transparent;
@@ -54,20 +54,17 @@ button {
     color: #fff;
     padding: 0.5rem 0 0.5rem;
     position: relative; }
-    .header .search input::before {
-      content: "\25AE";
-      font-family: FontAwesome;
-      left: -5px;
-      position: absolute;
-      top: 0; }
-  .header .cart {
+  .header .search .fa {
+    margin-left: -1rem; }
+  .header .cartBtn {
     color: #fff;
     position: relative;
     background: transparent;
-    outline: none; }
-    .header .cart .fa {
+    outline: none;
+    cursor: pointer; }
+    .header .cartBtn .fa {
       font-size: 1.5rem; }
-    .header .cart .cartItemCount {
+    .header .cartBtn .cartItemCount {
       position: absolute;
       background: #ff0000;
       width: 25px;
@@ -102,6 +99,11 @@ button {
       border: 1px solid #1c1c1c;
       text-align: center;
       padding: 1.5rem 2.5rem; }
+      .grid ul li.error {
+        text-align: center;
+        border: 2px solid #ff0000;
+        color: #4269ea;
+        font-weight: 500; }
       .grid ul li h2 {
         font-size: 1.5rem;
         margin: 1.5rem 0; }
@@ -143,21 +145,47 @@ button {
   left: 0;
   top: 0;
   display: none; }
-  .overlay .content {
+  .overlay .sortContent,
+  .overlay .filterContent,
+  .overlay .cartItemContent {
+    display: none;
     background: #fff;
     padding: 1.5rem;
     max-width: 800px;
     margin: 5% auto 0;
-    position: relative; }
-  .overlay .sort,
-  .overlay .filter,
-  .overlay .carItems {
-    display: none; }
+    position: relative;
+    text-align: center; }
+  .overlay h3 {
+    margin-bottom: 1.5rem; }
+  .overlay p {
+    margin-bottom: 0.5rem; }
+  .overlay #range {
+    width: 100%;
+    margin-bottom: 0.2rem; }
+  .overlay #rangeInputValue {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 2rem; }
   .overlay .close {
+    color: #fff;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 1.25rem; }
+    right: -25px;
+    top: -25px;
+    font-size: 2rem;
+    cursor: pointer; }
+
+#productListing {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem; }
+  #productListing th {
+    background: #4269ea;
+    padding: 0.8rem;
+    text-align: left;
+    color: #fff; }
+  #productListing td {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 0.8rem; }
 
 body {
   font: normal 16px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }

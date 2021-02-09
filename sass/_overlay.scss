@@ -6,22 +6,38 @@
   left: 0;
   top: 0;
   display: none;
-  .content {
+  .sortContent,
+  .filterContent,
+  .cartItemContent {
+    display: none;
     background: $color-white;
     padding: 1.5rem;
     max-width: 800px;
     margin: 5% auto 0;
     position: relative;
+    text-align: center;
   }
-  .sort,
-  .filter,
-  .carItems {
-    display: none;
+  h3 {
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 0.5rem;
+  }
+  #range {
+    width: 100%;
+    margin-bottom: 0.2rem;
+  }
+  #rangeInputValue {
+    font-weight: 500;
+    font-size: $fs-xl;
+    margin-bottom: 2rem;
   }
   .close {
+    color: $color-white;
     position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: $fs-l;
+    right: -25px;
+    top: -25px;
+    font-size: $fs-xxl;
+    cursor: pointer;
   }
 }

@@ -1,7 +1,8 @@
 const cartItemCount = document.querySelector(".cartItemCount");
 const cartOverlay = document.querySelector(".overlay");
-const cartIcon = document.querySelector(".header .cart");
+const cartIcon = document.querySelector(".header .cartBtn");
 const closeIcon = document.querySelector(".overlay .close");
+const productTable = document.querySelector("#productSummary tbody");
 const cartItemsArr = [];
 
 const cart = (items) => {
@@ -22,12 +23,12 @@ const cart = (items) => {
 
 cartIcon.addEventListener("click", () => {
   cartOverlay.style.display = "block";
-  cartOverlay.querySelector(".cartItems").style.display = "block";
+  cartOverlay.querySelector(".cartItemContent").style.display = "block";
 });
 
 closeIcon.addEventListener("click", () => {
   cartOverlay.style.display = "none";
-  cartOverlay.querySelector(".cartItems").style.display = "none";
+  cartOverlay.querySelector(".cartItemContent").style.display = "none";
 });
 
 export default cart;
